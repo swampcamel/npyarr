@@ -156,6 +156,10 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
   margin-right: auto;
 }
 
+h2:hover, h3:hover, .section-tag:hover {
+  color: #2C63ae;
+}
+
 .highlights {
   display: flex;
   justify-content: space-around;
@@ -218,6 +222,7 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
 
 .radio-options {
   text-align: center;
+  position: relative;
 }
 .radio-options img {
   margin-left: auto;
@@ -227,7 +232,11 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
 }
 
 .radio-option1 {
-  width: 200px;
+  max-width: 38%;
+  border: 1px solid gray;
+  padding: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 895px) {
@@ -245,6 +254,14 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
   }
   .blurb img {
     max-width: 175px;
+  }
+
+  .radio-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .radio-options .radio-option1 {
+    margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 1230px) {

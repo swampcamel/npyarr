@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
   font-family: 'PT Serif', serif;
 }
 
+
 .section-tag {
   font-family: 'Roboto Mono', monospace;
 }
@@ -83,6 +84,7 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
   margin-right: 5%;
   font-size: 14px;
   width: 290px;
+
   .radio-icon {
       padding-bottom: 2%;
     color: #2C63ae;
@@ -166,6 +168,12 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
   @include centerOnPage;
 }
 
+h2, h3, .section-tag {
+  &:hover {
+    color: #2C63ae;
+  }
+}
+
 .highlights {
   @include contentWrap;
   background: none;
@@ -216,6 +224,7 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
 
 .radio-options {
   text-align: center;
+  position: relative;
   img {
     @include centerOnPage;
     display: block;
@@ -224,7 +233,11 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
 }
 
 .radio-option1 {
-  width: 200px;
+  max-width: 38%;
+  border: 1px solid gray;
+  padding: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 
@@ -246,6 +259,13 @@ h1, h2, h3, h4, h5, h6, p, a, .radioMod {
     @include centerOnPage;
     img {
       max-width: 175px;
+    }
+  }
+  .radio-options {
+    flex-direction: column;
+    align-items: center;
+    .radio-option1 {
+      margin-bottom: 5px;
     }
   }
 }
